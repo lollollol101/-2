@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+.vscode/
+.idea/
+#не помню, чтобы рассказывали детально. источник:https://purpleschool.ru/knowledge-base/git/basics/gitignore
