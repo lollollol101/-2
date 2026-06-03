@@ -16,12 +16,12 @@ class Ingredient:
         self._quantity=value
 
     def __str__(self):
-        return f'{self.name}: {self.quantity} {self.unit}'
+        return f'{self.name}: {self.quantity:.1f} {self.unit}'
     
     def __repr__(self):
         return f"Ingredient('{self.name}', {self.quantity}, '{self.unit}')"
     
-    def __eq__(self, other: Ingredient):
+    def __eq__(self, other):
         return self.name==other.name and self.unit==other.unit
 
  
@@ -93,7 +93,7 @@ class ShoppingList:
         shoppinglist.sort(key=lambda x: x.name)
         return shoppinglist
     
-    def __add__(self, other: ShoppingList):
+    def __add__(self, other):
         new_shoppinglist= ShoppingList()
         new_shoppinglist._items= self._items.copy() + other._items.copy()
         return new_shoppinglist
